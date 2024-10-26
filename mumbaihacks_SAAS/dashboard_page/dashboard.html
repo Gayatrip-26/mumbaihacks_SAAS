@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>AI Work Hub</h2>
+            <nav>
+                <a href="#task-priorities">Task Priorities</a>
+                <a href="#pomodoro-timer">Pomodoro Timer</a>
+                <a href="#to-do-list">To-Do List</a>
+                <a href="#workload-analysis">Workload Analysis</a>
+            </nav>
+        </aside>
+
+        <main class="dashboard-content">
+            <header class="header">
+                <h1>Dashboard</h1>
+                <p>Welcome back, ready to enhance productivity!</p>
+            </header>
+
+            <section id="task-priorities" class="card">
+                <h2>Task Priorities</h2>
+                <div class="priority-section">
+                    <h3>High-Priority Tasks</h3>
+                    <div id="highPriorityTasks" class="priority-tasks"></div>
+                </div>
+                <div class="priority-section">
+                    <h3>Medium-Priority Tasks</h3>
+                    <div id="mediumPriorityTasks" class="priority-tasks"></div>
+                </div>
+                <div class="priority-section">
+                    <h3>Low-Priority Tasks</h3>
+                    <div id="lowPriorityTasks" class="priority-tasks"></div>
+                </div>
+                <input type="text" id="priorityTaskInput" placeholder="Add New Task">
+                <button onclick="addPriorityTask()">Add Task</button>
+            </section>
+
+
+            <section id="pomodoro-timer" class="card">
+                <h2>Pomodoro Timer</h2>
+                <div class="timer">
+                    <p id="time">15:00</p>
+                    <button onclick="startTimer()">Start</button>
+                    <button onclick="resetTimer()">Reset</button>
+                </div>
+            </section>
+
+            <section id="to-do-list" class="card">
+                <h2>To-Do List</h2>
+                <div class="to-do">
+                    <ul id="toDoList"></ul>
+                    <input type="text" id="toDoInput" placeholder="New Task">
+                    <button onclick="addToDo()">Add</button>
+                </div>
+            </section>
+
+            <section id="workload-analysis" class="card">
+                <h2>Workload Analysis</h2>
+                <div class="workload-info">
+                    <p>Your current workload: <span id="workload-level">Moderate</span></p>
+                    <p>Predicted workload for the week: <span id="predicted-workload">High</span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background and Container */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1A73E8, #0A3D91);
+    color: #ffffff;
+}
+
+.login-container {
+    background-color: #ffffff;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333;
+}
+
+/* Header */
+.login-header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #0A3D91;
+}
+
+.login-header p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Inputs */
+.login-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 0.5rem 0 1.2rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* User Type Buttons */
+.user-type-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.user-type {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 1rem;
+    background-color: #0A3D91;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-type.selected,
+.user-type:hover {
+    background-color: #1A73E8;
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: #1A73E8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0A3D91;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .login-container {
+        width: 90%;
+    }
+}
